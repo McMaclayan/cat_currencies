@@ -1,0 +1,65 @@
+@import 'src/app/shared/styles';
+
+.select {
+    display: flex;
+    flex-direction: column;
+    width: 181px;
+    margin-left: 29px;
+    background-position: calc(100% - 20px) 15px;
+    background-repeat: no-repeat;
+    background-image: url('./images/chevron-down.svg');
+    position: absolute;
+    z-index: 2;
+}
+
+.title {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid $color-gray-100;
+    font-size: $font-size-m;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.optionList {
+    height: 171px;
+    overflow: auto;
+    margin-top: 6px;
+    border: 1px solid $color-gray-100;
+    font-size: $font-size-m;
+    font-weight: 300;
+    background: $color-white;
+
+    &::-webkit-scrollbar {
+        width: 7px;
+        background: $color-white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        height: 120px;
+        background: $color-gray-100;
+    }
+}
+
+.option {
+    font: inherit;
+    height: 21px;
+    border-bottom: 1px solid $color-gray-100;
+    padding: 10px 15px;
+
+    &:hover {
+        cursor: pointer;
+        background: $color-gray-100;
+    }
+}
+
+.selectedOption {
+    background: $color-gray-50;
+}
+
+@media (max-width: 984px) {
+    .select {
+        margin: 0;
+        left: calc((100% - 181px) / 2);
+    }
+}

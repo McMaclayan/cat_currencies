@@ -18,3 +18,9 @@
     font-size: $font-size-m;
     color: $color-black;
 }
+
+@media (max-width: 984px) {
+    .textBlock {
+        margin-left: 11px;
+    }
+}
