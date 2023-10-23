@@ -1,0 +1,41 @@
+@import 'src/app/shared/styles';
+
+.selectBlock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgBlock {
+    width: 225px;
+    height: 341px;
+    background: url('./images/Kitten.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.textBlock {
+    display: flex;
+    background: $color-black;
+    position: absolute;
+    width: 100%;
+    top: 27%;
+    height: 73vh;
+}
+
+.text {
+    font-size: $font-size-xxl;
+    color: $color-white;
+    margin: 43px auto 67px auto;
+    text-align: center;
+}
+
+@media (max-width: 984px) {
+    .text {
+        font-size: $font-size-xl;
+        margin-top: 32px;
+    }
+
+    .imgBlock {
+        display: none;
+    }
+}
